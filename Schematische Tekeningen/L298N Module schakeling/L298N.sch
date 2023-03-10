@@ -1,0 +1,322 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Driver_Motor:L298HN U1
+U 1 1 6051EA2B
+P 5900 3650
+F 0 "U1" H 5500 4500 50  0000 C CNN
+F 1 "L298HN" H 5600 4400 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-15_P2.54x2.54mm_StaggerOdd_Lead4.58mm_Vertical" H 5950 3000 50  0001 L CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000240.pdf" H 6050 3900 50  0001 C CNN
+	1    5900 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x06 J1
+U 1 1 6052522F
+P 4550 3500
+F 0 "J1" H 4468 2975 50  0000 C CNN
+F 1 "Conn_01x06" H 4468 3066 50  0000 C CNN
+F 2 "" H 4550 3500 50  0001 C CNN
+F 3 "~" H 4550 3500 50  0001 C CNN
+	1    4550 3500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5300 3150 4750 3150
+Wire Wire Line
+	4750 3150 4750 3200
+Wire Wire Line
+	5300 3250 4750 3250
+Wire Wire Line
+	4750 3250 4750 3300
+Wire Wire Line
+	5300 3750 4750 3750
+Wire Wire Line
+	4750 3750 4750 3700
+Wire Wire Line
+	4750 3650 4750 3600
+Wire Wire Line
+	4750 3650 5300 3650
+Wire Wire Line
+	5300 3350 4750 3350
+Wire Wire Line
+	4750 3350 4750 3400
+Wire Wire Line
+	5300 3550 4750 3550
+Wire Wire Line
+	4750 3550 4750 3500
+$Comp
+L power:+12V #PWR01
+U 1 1 6052D961
+P 6000 2600
+F 0 "#PWR01" H 6000 2450 50  0001 C CNN
+F 1 "+12V" H 6050 2750 50  0000 C CNN
+F 2 "" H 6000 2600 50  0001 C CNN
+F 3 "" H 6000 2600 50  0001 C CNN
+	1    6000 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR03
+U 1 1 6052E035
+P 5900 2600
+F 0 "#PWR03" H 5900 2450 50  0001 C CNN
+F 1 "+5V" H 5800 2750 50  0000 C CNN
+F 2 "" H 5900 2600 50  0001 C CNN
+F 3 "" H 5900 2600 50  0001 C CNN
+	1    5900 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J2
+U 1 1 6052F842
+P 7950 3600
+F 0 "J2" H 8030 3592 50  0000 L CNN
+F 1 "Conn_01x04" H 8030 3501 50  0000 L CNN
+F 2 "" H 7950 3600 50  0001 C CNN
+F 3 "~" H 7950 3600 50  0001 C CNN
+	1    7950 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 3450 7750 3500
+Wire Wire Line
+	7750 3550 7750 3600
+Wire Wire Line
+	7750 3750 7750 3700
+Wire Wire Line
+	7750 3850 7750 3800
+$Comp
+L Device:C C1
+U 1 1 60531A27
+P 7550 3050
+F 0 "C1" H 7665 3096 50  0000 L CNN
+F 1 "220uf" H 7665 3005 50  0000 L CNN
+F 2 "" H 7588 2900 50  0001 C CNN
+F 3 "~" H 7550 3050 50  0001 C CNN
+	1    7550 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 2900 7550 2650
+Wire Wire Line
+	6000 2650 6000 2600
+Wire Wire Line
+	7550 3200 7550 4600
+Wire Wire Line
+	7550 4600 7250 4600
+Wire Wire Line
+	5900 4600 5900 4350
+$Comp
+L power:GND #PWR02
+U 1 1 605337F9
+P 5900 4650
+F 0 "#PWR02" H 5900 4400 50  0001 C CNN
+F 1 "GND" H 5905 4477 50  0000 C CNN
+F 2 "" H 5900 4650 50  0001 C CNN
+F 3 "" H 5900 4650 50  0001 C CNN
+	1    5900 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Simulation_SPICE:DIODE D7
+U 1 1 60534CCE
+P 7250 2800
+F 0 "D7" V 7296 2720 50  0000 R CNN
+F 1 "DIODE" V 7205 2720 50  0000 R CNN
+F 2 "" H 7250 2800 50  0001 C CNN
+F 3 "~" H 7250 2800 50  0001 C CNN
+F 4 "Y" H 7250 2800 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "D" H 7250 2800 50  0001 L CNN "Spice_Primitive"
+	1    7250 2800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Simulation_SPICE:DIODE D5
+U 1 1 605359C7
+P 7050 2800
+F 0 "D5" V 7096 2720 50  0000 R CNN
+F 1 "DIODE" V 7005 2720 50  0000 R CNN
+F 2 "" H 7050 2800 50  0001 C CNN
+F 3 "~" H 7050 2800 50  0001 C CNN
+F 4 "Y" H 7050 2800 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "D" H 7050 2800 50  0001 L CNN "Spice_Primitive"
+	1    7050 2800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Simulation_SPICE:DIODE D3
+U 1 1 60536196
+P 6850 2800
+F 0 "D3" V 6896 2720 50  0000 R CNN
+F 1 "DIODE" V 6805 2720 50  0000 R CNN
+F 2 "" H 6850 2800 50  0001 C CNN
+F 3 "~" H 6850 2800 50  0001 C CNN
+F 4 "Y" H 6850 2800 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "D" H 6850 2800 50  0001 L CNN "Spice_Primitive"
+	1    6850 2800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Simulation_SPICE:DIODE D1
+U 1 1 605364B1
+P 6650 2800
+F 0 "D1" V 6696 2720 50  0000 R CNN
+F 1 "DIODE" V 6605 2720 50  0000 R CNN
+F 2 "" H 6650 2800 50  0001 C CNN
+F 3 "~" H 6650 2800 50  0001 C CNN
+F 4 "Y" H 6650 2800 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "D" H 6650 2800 50  0001 L CNN "Spice_Primitive"
+	1    6650 2800
+	0    -1   -1   0   
+$EndComp
+Connection ~ 7250 2650
+Wire Wire Line
+	7250 2650 7550 2650
+Connection ~ 7050 2650
+Wire Wire Line
+	7050 2650 7250 2650
+Wire Wire Line
+	6000 2650 6650 2650
+Connection ~ 6650 2650
+Wire Wire Line
+	6650 2650 6850 2650
+Connection ~ 6850 2650
+Wire Wire Line
+	6850 2650 7050 2650
+$Comp
+L Simulation_SPICE:DIODE D2
+U 1 1 6054043D
+P 6650 4450
+F 0 "D2" V 6696 4370 50  0000 R CNN
+F 1 "DIODE" V 6605 4370 50  0000 R CNN
+F 2 "" H 6650 4450 50  0001 C CNN
+F 3 "~" H 6650 4450 50  0001 C CNN
+F 4 "Y" H 6650 4450 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "D" H 6650 4450 50  0001 L CNN "Spice_Primitive"
+	1    6650 4450
+	0    -1   -1   0   
+$EndComp
+Connection ~ 6650 4600
+$Comp
+L Simulation_SPICE:DIODE D4
+U 1 1 60540D7C
+P 6850 4450
+F 0 "D4" V 6896 4370 50  0000 R CNN
+F 1 "DIODE" V 6805 4370 50  0000 R CNN
+F 2 "" H 6850 4450 50  0001 C CNN
+F 3 "~" H 6850 4450 50  0001 C CNN
+F 4 "Y" H 6850 4450 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "D" H 6850 4450 50  0001 L CNN "Spice_Primitive"
+	1    6850 4450
+	0    -1   -1   0   
+$EndComp
+Connection ~ 6850 4600
+Wire Wire Line
+	6850 4600 6650 4600
+$Comp
+L Simulation_SPICE:DIODE D6
+U 1 1 605411B1
+P 7050 4450
+F 0 "D6" V 7096 4370 50  0000 R CNN
+F 1 "DIODE" V 7005 4370 50  0000 R CNN
+F 2 "" H 7050 4450 50  0001 C CNN
+F 3 "~" H 7050 4450 50  0001 C CNN
+F 4 "Y" H 7050 4450 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "D" H 7050 4450 50  0001 L CNN "Spice_Primitive"
+	1    7050 4450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Simulation_SPICE:DIODE D8
+U 1 1 605415F4
+P 7250 4450
+F 0 "D8" V 7296 4370 50  0000 R CNN
+F 1 "DIODE" V 7205 4370 50  0000 R CNN
+F 2 "" H 7250 4450 50  0001 C CNN
+F 3 "~" H 7250 4450 50  0001 C CNN
+F 4 "Y" H 7250 4450 50  0001 L CNN "Spice_Netlist_Enabled"
+F 5 "D" H 7250 4450 50  0001 L CNN "Spice_Primitive"
+	1    7250 4450
+	0    -1   -1   0   
+$EndComp
+Connection ~ 7050 4600
+Wire Wire Line
+	6850 4600 7050 4600
+Connection ~ 7250 4600
+Wire Wire Line
+	7050 4600 7250 4600
+Wire Wire Line
+	7250 2950 7250 3850
+Connection ~ 7250 3850
+Wire Wire Line
+	7250 3850 7750 3850
+Wire Wire Line
+	7050 2950 7050 3750
+Connection ~ 7050 3750
+Wire Wire Line
+	7050 3750 7750 3750
+Wire Wire Line
+	6500 3450 6650 3450
+Wire Wire Line
+	6500 3550 6850 3550
+Wire Wire Line
+	6500 3750 7050 3750
+Wire Wire Line
+	6500 3850 7250 3850
+Wire Wire Line
+	6850 2950 6850 3550
+Connection ~ 6850 3550
+Wire Wire Line
+	6850 3550 7750 3550
+Wire Wire Line
+	6650 2950 6650 3450
+Connection ~ 6650 3450
+Wire Wire Line
+	6650 3450 7750 3450
+Wire Wire Line
+	6650 4300 6650 3450
+Wire Wire Line
+	6850 4300 6850 3550
+Wire Wire Line
+	7050 4300 7050 3750
+Wire Wire Line
+	7250 4300 7250 3850
+Wire Wire Line
+	5600 4350 5600 4450
+Wire Wire Line
+	5600 4450 5650 4450
+Wire Wire Line
+	5700 4450 5700 4350
+Wire Wire Line
+	5650 4450 5650 4600
+Wire Wire Line
+	5650 4600 5900 4600
+Connection ~ 5650 4450
+Wire Wire Line
+	5650 4450 5700 4450
+Connection ~ 5900 4600
+Wire Wire Line
+	5900 4600 6650 4600
+Wire Wire Line
+	5900 4650 5900 4600
+Wire Wire Line
+	5900 2600 5900 2950
+Wire Wire Line
+	6000 2650 6000 2950
+Connection ~ 6000 2650
+$EndSCHEMATC

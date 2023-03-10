@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name nokia5110)(type Legacy)(uri ${KIPRJMOD}/libs/nokia5110.lib)(options "")(descr ""))
+)

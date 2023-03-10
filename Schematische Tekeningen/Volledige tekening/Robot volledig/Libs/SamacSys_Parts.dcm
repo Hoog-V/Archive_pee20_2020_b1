@@ -1,0 +1,15 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP NE555DR
+D Single Precision Timer
+K
+F http://www.ti.com/lit/ds/symlink/ne555.pdf
+$ENDCMP
+#
+$CMP MSP430FR2476TPTR
+D 16 MHz ultra-low-power microcontroller with 64 KB FRAM, 8 KB RAM, 12-bit ADC, 43 IO, 5 16-bit timers
+K
+F http://www.ti.com/lit/gpn/MSP430FR2476
+$ENDCMP
+#
+#End Doc Library

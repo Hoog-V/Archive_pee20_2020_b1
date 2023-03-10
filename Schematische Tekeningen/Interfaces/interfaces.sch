@@ -1,0 +1,355 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Switch:SW_Push SW1
+U 1 1 602D2398
+P 9800 3150
+F 0 "SW1" H 9800 3435 50  0000 C CNN
+F 1 "Startknop" H 9800 3344 50  0000 C CNN
+F 2 "" H 9800 3350 50  0001 C CNN
+F 3 "~" H 9800 3350 50  0001 C CNN
+	1    9800 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW2
+U 1 1 602D27BB
+P 9800 3550
+F 0 "SW2" H 9800 3835 50  0000 C CNN
+F 1 "Stopknop" H 9800 3744 50  0000 C CNN
+F 2 "" H 9800 3750 50  0001 C CNN
+F 3 "~" H 9800 3750 50  0001 C CNN
+	1    9800 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push SW3
+U 1 1 602D2CC4
+P 9800 3950
+F 0 "SW3" H 9800 4235 50  0000 C CNN
+F 1 "Resetknop" H 9800 4144 50  0000 C CNN
+F 2 "" H 9800 4150 50  0001 C CNN
+F 3 "~" H 9800 4150 50  0001 C CNN
+	1    9800 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 602D7BA6
+P 10000 3150
+F 0 "#PWR06" H 10000 2900 50  0001 C CNN
+F 1 "GND" V 10005 3022 50  0000 R CNN
+F 2 "" H 10000 3150 50  0001 C CNN
+F 3 "" H 10000 3150 50  0001 C CNN
+	1    10000 3150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 602D805E
+P 10000 3550
+F 0 "#PWR07" H 10000 3300 50  0001 C CNN
+F 1 "GND" V 10005 3422 50  0000 R CNN
+F 2 "" H 10000 3550 50  0001 C CNN
+F 3 "" H 10000 3550 50  0001 C CNN
+	1    10000 3550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 602D82F7
+P 10000 3950
+F 0 "#PWR08" H 10000 3700 50  0001 C CNN
+F 1 "GND" V 10005 3822 50  0000 R CNN
+F 2 "" H 10000 3950 50  0001 C CNN
+F 3 "" H 10000 3950 50  0001 C CNN
+	1    10000 3950
+	0    -1   -1   0   
+$EndComp
+Text GLabel 9600 3150 0    50   Input ~ 0
+Startknop
+Text GLabel 9600 3550 0    50   Input ~ 0
+Stopknop
+Text GLabel 9600 3950 0    50   Input ~ 0
+Resetknop
+$Comp
+L power:GND #PWR04
+U 1 1 602D9A37
+P 9100 2400
+F 0 "#PWR04" H 9100 2150 50  0001 C CNN
+F 1 "GND" V 9105 2272 50  0000 R CNN
+F 2 "" H 9100 2400 50  0001 C CNN
+F 3 "" H 9100 2400 50  0001 C CNN
+	1    9100 2400
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3V3 #PWR05
+U 1 1 602DA0A7
+P 9100 2500
+F 0 "#PWR05" H 9100 2350 50  0001 C CNN
+F 1 "+3V3" V 9115 2628 50  0000 L CNN
+F 2 "" H 9100 2500 50  0001 C CNN
+F 3 "" H 9100 2500 50  0001 C CNN
+	1    9100 2500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:Conn_01x08_Male J2
+U 1 1 602DB795
+P 9300 2200
+F 0 "J2" H 9272 2082 50  0000 R CNN
+F 1 "Display_Nokia5110" H 9272 2173 50  0000 R CNN
+F 2 "" H 9300 2200 50  0001 C CNN
+F 3 "~" H 9300 2200 50  0001 C CNN
+	1    9300 2200
+	-1   0    0    1   
+$EndComp
+Text GLabel 9100 2300 0    50   Input ~ 0
+CE
+Text GLabel 9100 2200 0    50   Input ~ 0
+~RST
+Text GLabel 9100 2100 0    50   Input ~ 0
+Data-command
+Text GLabel 9100 2000 0    50   Input ~ 0
+Mosi
+Text GLabel 9100 1900 0    50   Input ~ 0
+SCK
+$Comp
+L Transistor_BJT:BC547 Q1
+U 1 1 602DEA9D
+P 8600 1600
+F 0 "Q1" H 8791 1646 50  0000 L CNN
+F 1 "BC547" H 8791 1555 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8800 1525 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC550-D.pdf" H 8600 1600 50  0001 L CNN
+	1    8600 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8700 1800 9100 1800
+$Comp
+L power:+3V3 #PWR03
+U 1 1 602E074B
+P 8700 1400
+F 0 "#PWR03" H 8700 1250 50  0001 C CNN
+F 1 "+3V3" H 8715 1573 50  0000 C CNN
+F 2 "" H 8700 1400 50  0001 C CNN
+F 3 "" H 8700 1400 50  0001 C CNN
+	1    8700 1400
+	1    0    0    -1  
+$EndComp
+Text GLabel 8400 1600 0    50   Input ~ 0
+Backlight
+$Comp
+L Connector:Conn_01x04_Male J1
+U 1 1 602F09A2
+P 7850 2250
+F 0 "J1" H 7822 2132 50  0000 R CNN
+F 1 "DS1302 RTC" H 7822 2223 50  0000 R CNN
+F 2 "" H 7850 2250 50  0001 C CNN
+F 3 "~" H 7850 2250 50  0001 C CNN
+	1    7850 2250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3V3 #PWR01
+U 1 1 602F209F
+P 7650 2050
+F 0 "#PWR01" H 7650 1900 50  0001 C CNN
+F 1 "+3V3" V 7665 2178 50  0000 L CNN
+F 2 "" H 7650 2050 50  0001 C CNN
+F 3 "" H 7650 2050 50  0001 C CNN
+	1    7650 2050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 602F30BC
+P 7650 2350
+F 0 "#PWR02" H 7650 2100 50  0001 C CNN
+F 1 "GND" H 7655 2177 50  0000 C CNN
+F 2 "" H 7650 2350 50  0001 C CNN
+F 3 "" H 7650 2350 50  0001 C CNN
+	1    7650 2350
+	1    0    0    -1  
+$EndComp
+Text GLabel 7650 2250 0    50   Input ~ 0
+SCK
+Text GLabel 7650 2150 0    50   Input ~ 0
+DATA
+$Comp
+L Device:LED_RGB D?
+U 1 1 6034029D
+P 7100 3600
+F 0 "D?" H 7100 4097 50  0000 C CNN
+F 1 "RGB_LED" H 7100 4006 50  0000 C CNN
+F 2 "" H 7100 3550 50  0001 C CNN
+F 3 "~" H 7100 3550 50  0001 C CNN
+	1    7100 3600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 60341D01
+P 6800 3400
+F 0 "R?" V 6996 3400 50  0000 C CNN
+F 1 "180" V 6905 3400 50  0000 C CNN
+F 2 "" H 6800 3400 50  0001 C CNN
+F 3 "~" H 6800 3400 50  0001 C CNN
+	1    6800 3400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 603427C2
+P 6800 3600
+F 0 "R?" V 6996 3600 50  0000 C CNN
+F 1 "180" V 6905 3600 50  0000 C CNN
+F 2 "" H 6800 3600 50  0001 C CNN
+F 3 "~" H 6800 3600 50  0001 C CNN
+	1    6800 3600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 60342C4B
+P 6800 3800
+F 0 "R?" V 6996 3800 50  0000 C CNN
+F 1 "180" V 6905 3800 50  0000 C CNN
+F 2 "" H 6800 3800 50  0001 C CNN
+F 3 "~" H 6800 3800 50  0001 C CNN
+	1    6800 3800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 6034545E
+P 6700 3400
+F 0 "#PWR?" H 6700 3250 50  0001 C CNN
+F 1 "+3V3" V 6715 3528 50  0000 L CNN
+F 2 "" H 6700 3400 50  0001 C CNN
+F 3 "" H 6700 3400 50  0001 C CNN
+	1    6700 3400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Transistor_BJT:BC547 Q?
+U 1 1 60348080
+P 8350 3650
+F 0 "Q?" H 8541 3696 50  0000 L CNN
+F 1 "BC547" H 8541 3605 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8550 3575 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 8350 3650 50  0001 L CNN
+	1    8350 3650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC547 Q?
+U 1 1 6034D4A2
+P 7950 3850
+F 0 "Q?" H 8141 3804 50  0000 L CNN
+F 1 "BC547" H 8141 3895 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 8150 3775 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 7950 3850 50  0001 L CNN
+	1    7950 3850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC547 Q?
+U 1 1 6034E30D
+P 7700 4250
+F 0 "Q?" H 7891 4296 50  0000 L CNN
+F 1 "BC547" H 7891 4205 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 7900 4175 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 7700 4250 50  0001 L CNN
+	1    7700 4250
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 3400 8250 3400
+Wire Wire Line
+	8250 3400 8250 3450
+Wire Wire Line
+	7300 3600 7850 3600
+Wire Wire Line
+	7850 3600 7850 3650
+Wire Wire Line
+	7300 3800 7600 3800
+Wire Wire Line
+	7600 3800 7600 4050
+$Comp
+L power:GND #PWR?
+U 1 1 6035CD65
+P 7600 4450
+F 0 "#PWR?" H 7600 4200 50  0001 C CNN
+F 1 "GND" H 7605 4277 50  0000 C CNN
+F 2 "" H 7600 4450 50  0001 C CNN
+F 3 "" H 7600 4450 50  0001 C CNN
+	1    7600 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6035D38E
+P 7850 4050
+F 0 "#PWR?" H 7850 3800 50  0001 C CNN
+F 1 "GND" H 7855 3877 50  0000 C CNN
+F 2 "" H 7850 4050 50  0001 C CNN
+F 3 "" H 7850 4050 50  0001 C CNN
+	1    7850 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6035DA90
+P 8250 3850
+F 0 "#PWR?" H 8250 3600 50  0001 C CNN
+F 1 "GND" H 8255 3677 50  0000 C CNN
+F 2 "" H 8250 3850 50  0001 C CNN
+F 3 "" H 8250 3850 50  0001 C CNN
+	1    8250 3850
+	1    0    0    -1  
+$EndComp
+Text GLabel 7900 4250 2    50   Input ~ 0
+MCULEDPIN_B
+Text GLabel 8150 3850 2    50   Input ~ 0
+MCULEDPIN_G
+Text GLabel 8550 3650 2    50   Input ~ 0
+MCULEDPIN_R
+$Comp
+L power:+3V3 #PWR?
+U 1 1 60361003
+P 6700 3600
+F 0 "#PWR?" H 6700 3450 50  0001 C CNN
+F 1 "+3V3" V 6715 3728 50  0000 L CNN
+F 2 "" H 6700 3600 50  0001 C CNN
+F 3 "" H 6700 3600 50  0001 C CNN
+	1    6700 3600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+3V3 #PWR?
+U 1 1 60361272
+P 6700 3800
+F 0 "#PWR?" H 6700 3650 50  0001 C CNN
+F 1 "+3V3" V 6715 3928 50  0000 L CNN
+F 2 "" H 6700 3800 50  0001 C CNN
+F 3 "" H 6700 3800 50  0001 C CNN
+	1    6700 3800
+	0    -1   -1   0   
+$EndComp
+$EndSCHEMATC

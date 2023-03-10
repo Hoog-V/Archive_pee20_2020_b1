@@ -1,0 +1,1 @@
+"./interfaces.obj" "./main.obj" "../MSPMATHLIB_CCS_msp430_large_code_small_data.lib" "../lnk_msp430fr2476.cmd" -lfrwp_init.a -llibc.a 

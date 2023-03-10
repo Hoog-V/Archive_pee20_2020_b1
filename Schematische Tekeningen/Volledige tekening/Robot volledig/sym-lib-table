@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name botsingdetectie-cache)(type Legacy)(uri "C:/Users/vicvo/Documents/pee20_schematische tekeningen/Botsing detectie/botsingdetectie/botsingdetectie-cache.lib")(options "")(descr ""))
+  (lib (name Robot-volledig-rescue)(type Legacy)(uri "${KIPRJMOD}/Robot volledig-rescue.lib")(options "")(descr ""))
+)

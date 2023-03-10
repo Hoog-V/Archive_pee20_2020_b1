@@ -48,10 +48,3 @@ Thumbs.db
 *.mov
 *.wmv
 
-#compile binaries
-*.o
-*.obj
-*.d
-*.mk
-*.map
-
